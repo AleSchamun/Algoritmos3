@@ -1,0 +1,2 @@
+1- Consideramos que seria mejor usar unicamente un metodo estaHerido, en cuanto a que evitariamos tener codigo repetido como se estaria haciendo actualmente 
+2- Nos parece que esta bien porque cuando estos tres combatientes son sometidos al mismo test pueden comportarse de distinta manera aun cuando el comportamiento evaluado tenga el mismo nombre
