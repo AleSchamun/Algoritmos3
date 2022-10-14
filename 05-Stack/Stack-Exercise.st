@@ -426,14 +426,14 @@ Object subclass: #StateOfOOStack
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!StateOfOOStack methodsFor: 'operations' stamp: 'MMeichtri 10/12/2022 17:51:24'!
-popFrom: aStack
+!StateOfOOStack methodsFor: 'operations' stamp: 'MMeichtri 10/14/2022 16:55:34'!
+popFrom: aStackStorage
 
 	self subclassResponsibility ! !
 
 
-!StateOfOOStack methodsFor: 'accessing' stamp: 'MMeichtri 10/12/2022 17:51:12'!
-topOf: aStack
+!StateOfOOStack methodsFor: 'accessing' stamp: 'MMeichtri 10/14/2022 16:49:50'!
+topOf: aStackStorage
 	
 	self subclassResponsibility ! !
 
@@ -445,14 +445,14 @@ StateOfOOStack subclass: #OOStackEmpty
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStackEmpty methodsFor: 'operations' stamp: 'MMeichtri 10/12/2022 17:50:51'!
-popFrom: aStack
+!OOStackEmpty methodsFor: 'operations' stamp: 'MMeichtri 10/14/2022 16:55:45'!
+popFrom: aStackStorage
 
 	^ self error: OOStack stackEmptyErrorDescription! !
 
 
-!OOStackEmpty methodsFor: 'accessing' stamp: 'MMeichtri 10/12/2022 17:50:57'!
-topOf: aStack
+!OOStackEmpty methodsFor: 'accessing' stamp: 'MMeichtri 10/14/2022 16:55:50'!
+topOf: aStackStorage
 
 	^ self error: OOStack stackEmptyErrorDescription! !
 
@@ -462,10 +462,10 @@ topOf: aStack
 OOStackEmpty class
 	instanceVariableNames: ''!
 
-!OOStackEmpty class methodsFor: 'instanceCreation' stamp: 'MMeichtri 10/12/2022 17:45:23'!
-canInstantiateWith: stack
+!OOStackEmpty class methodsFor: 'instanceCreation' stamp: 'MMeichtri 10/14/2022 16:47:59'!
+canInstantiateWith: stackStorage
 
-	^ stack isEmpty! !
+	^ stackStorage isEmpty! !
 
 
 !classDefinition: #OOStackNotEmpty category: 'Stack-Exercise'!
@@ -475,16 +475,16 @@ StateOfOOStack subclass: #OOStackNotEmpty
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStackNotEmpty methodsFor: 'operations' stamp: 'MMeichtri 10/12/2022 17:50:44'!
-popFrom: aStack
+!OOStackNotEmpty methodsFor: 'operations' stamp: 'MMeichtri 10/14/2022 16:55:57'!
+popFrom: aStackStorage
 
-	^ aStack removeLast ! !
+	^ aStackStorage removeLast ! !
 
 
-!OOStackNotEmpty methodsFor: 'accessing' stamp: 'MMeichtri 10/11/2022 19:32:45'!
-topOf: unStack
+!OOStackNotEmpty methodsFor: 'accessing' stamp: 'MMeichtri 10/14/2022 16:56:03'!
+topOf: aStackStorage
 
-	^ unStack at: (unStack size)! !
+	^ aStackStorage at: (aStackStorage size)! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
@@ -492,7 +492,7 @@ topOf: unStack
 OOStackNotEmpty class
 	instanceVariableNames: ''!
 
-!OOStackNotEmpty class methodsFor: 'instanceCreation' stamp: 'MMeichtri 10/12/2022 17:45:23'!
-canInstantiateWith: stack
+!OOStackNotEmpty class methodsFor: 'instanceCreation' stamp: 'MMeichtri 10/14/2022 16:48:04'!
+canInstantiateWith: stackStorage
 
-	^ stack isEmpty not! !
+	^ stackStorage isEmpty not! !
