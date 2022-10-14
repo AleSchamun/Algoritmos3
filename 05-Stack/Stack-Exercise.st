@@ -257,56 +257,57 @@ setUp
 
 !classDefinition: #OOStack category: 'Stack-Exercise'!
 Object subclass: #OOStack
-	instanceVariableNames: 'stack'
+	instanceVariableNames: 'stackStorage'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStack methodsFor: 'accessing' stamp: 'MMeichtri 10/11/2022 19:52:00'!
+!OOStack methodsFor: 'size' stamp: 'MMeichtri 10/14/2022 16:36:31'!
 size
 	
-	^ stack size! !
+	^ stackStorage size! !
 
-!OOStack methodsFor: 'accessing' stamp: 'MMeichtri 10/12/2022 17:40:40'!
+
+!OOStack methodsFor: 'accessing' stamp: 'MMeichtri 10/14/2022 16:36:31'!
 top
 
-	^ self stateOfStack topOf: stack.
+	^ self stateOfStack topOf: stackStorage.
 ! !
 
 
-!OOStack methodsFor: 'initialization' stamp: 'MMeichtri 10/11/2022 14:03:59'!
+!OOStack methodsFor: 'initialization' stamp: 'MMeichtri 10/14/2022 16:36:31'!
 initialize
 
-	stack := OrderedCollection new.
+	stackStorage := OrderedCollection new.
 
 ! !
 
 
-!OOStack methodsFor: 'testing' stamp: 'MMeichtri 10/11/2022 14:41:19'!
+!OOStack methodsFor: 'testing' stamp: 'MMeichtri 10/14/2022 16:36:31'!
 isEmpty
 	
-	^ stack isEmpty
+	^ stackStorage isEmpty
 	! !
 
-!OOStack methodsFor: 'testing' stamp: 'MMeichtri 10/12/2022 17:45:23'!
+!OOStack methodsFor: 'testing' stamp: 'MMeichtri 10/14/2022 16:36:31'!
 stateOfStack
 	
-	| estadoDelStack |
-	estadoDelStack := StateOfOOStack subclasses detect: [ : state | state canInstantiateWith: stack ].
+	| stateStack |
+	stateStack := StateOfOOStack subclasses detect: [ : anState | anState canInstantiateWith: stackStorage ].
 	
-	^ estadoDelStack  new! !
+	^ stateStack  new! !
 
 
-!OOStack methodsFor: 'operations' stamp: 'MMeichtri 10/12/2022 17:40:40'!
+!OOStack methodsFor: 'operations' stamp: 'MMeichtri 10/14/2022 16:36:31'!
 pop
 	
-	^ self stateOfStack popFrom: stack
+	^ self stateOfStack popFrom: stackStorage
 ! !
 
-!OOStack methodsFor: 'operations' stamp: 'MMeichtri 10/12/2022 17:40:56'!
+!OOStack methodsFor: 'operations' stamp: 'MMeichtri 10/14/2022 16:36:31'!
 push: unElemento
 	
-	stack addLast: unElemento .
+	stackStorage addLast: unElemento .
 ! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
@@ -385,15 +386,16 @@ sentenceHasSamePrefix: aPrefix
 	^ (aPrefix commonPrefixWith: stackOfSentences top) = aPrefix size! !
 
 
-!SentenceFinderByPrefix methodsFor: 'accessing' stamp: 'MMeichtri 10/13/2022 22:56:06'!
+!SentenceFinderByPrefix methodsFor: 'size' stamp: 'MMeichtri 10/13/2022 22:56:06'!
 sizeOfStackOfSentences
 
 	^ stackOfSentences size! !
 
-!SentenceFinderByPrefix methodsFor: 'accessing' stamp: 'MMeichtri 10/13/2022 23:08:56'!
+!SentenceFinderByPrefix methodsFor: 'size' stamp: 'MMeichtri 10/13/2022 23:08:56'!
 sizeOfStackOfSentencesWithPrefix: sentencesWithPrefix
 
 	^ sentencesWithPrefix size! !
+
 
 !SentenceFinderByPrefix methodsFor: 'accessing' stamp: 'MMeichtri 10/13/2022 23:18:35'!
 topOfStackSentences
