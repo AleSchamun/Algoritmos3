@@ -294,6 +294,11 @@ Object subclass: #OOStack
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
+!OOStack methodsFor: 'accessing' stamp: 'MMeichtri 10/11/2022 19:52:00'!
+size
+	
+	^ stack size! !
+
 !OOStack methodsFor: 'accessing' stamp: 'MMeichtri 10/12/2022 17:40:40'!
 top
 
@@ -335,11 +340,6 @@ push: unElemento
 	
 	stack addLast: unElemento .
 ! !
-
-!OOStack methodsFor: 'operations' stamp: 'MMeichtri 10/11/2022 19:52:00'!
-size
-	
-	^ stack size! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
