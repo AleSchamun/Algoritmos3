@@ -391,12 +391,12 @@ esDireccionSur
 DireccionesDeMovimientoDeMarsRover class
 	instanceVariableNames: ''!
 
-!DireccionesDeMovimientoDeMarsRover class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/3/2022 09:22:41'!
-crearDireccionDeMovimientoAdecuadaParaMarsRover: unCaracter
+!DireccionesDeMovimientoDeMarsRover class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/4/2022 11:41:37'!
+crearDireccionDeMovimientoAdecuadaParaMarsRover: unPuntoCardinal
 
 	| direccionActual |
 	
-	direccionActual := DireccionesDeMovimientoDeMarsRover subclasses detect: [ : subclass | subclass with: unCaracter ].
+	direccionActual := DireccionesDeMovimientoDeMarsRover subclasses detect: [ : subclass | subclass with: unPuntoCardinal ].
 	
 	^ direccionActual new.! !
 
@@ -460,10 +460,10 @@ esDireccionSur
 DireccionDeMovimientoHaciaElEste class
 	instanceVariableNames: ''!
 
-!DireccionDeMovimientoHaciaElEste class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/3/2022 23:31:43'!
-with: unCaracter
+!DireccionDeMovimientoHaciaElEste class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/4/2022 11:40:38'!
+with: unPuntoCardinal
 
-	^ unCaracter = 'E'! !
+	^ unPuntoCardinal = 'E'! !
 
 
 !classDefinition: #DireccionDeMovimientoHaciaElNorte category: 'TDD-MarsRover'!
@@ -520,10 +520,10 @@ rotarHaciaLaIzquierda: marsRover
 DireccionDeMovimientoHaciaElNorte class
 	instanceVariableNames: ''!
 
-!DireccionDeMovimientoHaciaElNorte class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/3/2022 09:24:00'!
-with: unCaracter
+!DireccionDeMovimientoHaciaElNorte class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/4/2022 11:41:01'!
+with: unPuntoCardinal
 
-	^ unCaracter = 'N'! !
+	^ unPuntoCardinal = 'N'! !
 
 
 !classDefinition: #DireccionDeMovimientoHaciaElOeste category: 'TDD-MarsRover'!
@@ -580,10 +580,10 @@ rotarHaciaLaIzquierda: marsRover
 DireccionDeMovimientoHaciaElOeste class
 	instanceVariableNames: ''!
 
-!DireccionDeMovimientoHaciaElOeste class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/3/2022 09:24:17'!
-with: unCaracter
+!DireccionDeMovimientoHaciaElOeste class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/4/2022 11:41:08'!
+with: unPuntoCardinal
 
-	^ unCaracter = 'O'! !
+	^ unPuntoCardinal = 'O'! !
 
 
 !classDefinition: #DireccionDeMovimientoHaciaElSur category: 'TDD-MarsRover'!
@@ -640,10 +640,10 @@ esDireccionSur
 DireccionDeMovimientoHaciaElSur class
 	instanceVariableNames: ''!
 
-!DireccionDeMovimientoHaciaElSur class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/3/2022 09:24:41'!
-with: unCaracter
+!DireccionDeMovimientoHaciaElSur class methodsFor: 'as yet unclassified' stamp: 'MMeichtri 11/4/2022 11:41:14'!
+with: unPuntoCardinal
 
-	^ unCaracter = 'S'! !
+	^ unPuntoCardinal = 'S'! !
 
 
 !classDefinition: #MovimientoDeMarsRover category: 'TDD-MarsRover'!
