@@ -80,21 +80,8 @@ test05SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverEnDireccionAlN
 
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@2)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:16:53'!
-test06SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAdelanteEnDireccionAlEste
-
-	| movimientoDeMarsRover posicion  |
-	
-	posicion := (1@1).
-	
-	movimientoDeMarsRover := self iniciarMovimientoDeMarsRoverEnLaPosicion: posicion haciaElPuntoCardinal: puntoCardinalEste .
-	
-	movimientoDeMarsRover movimiento: cadenaDeComandosHaciaAdelante .
-
-	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@5)).! !
-
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:17:06'!
-test07SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAtrasEnDireccionAlEste
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:33:55'!
+test06SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAtrasEnDireccionAlEste
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -106,8 +93,8 @@ test07SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAtrasEnDi
 
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (2@1)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:17:19'!
-test08SeRecibeUnaCadenaDeComandosParaMoverseEnDireccionAlOesteYMarsRoverSeMueveHaciaAdelante
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:00'!
+test07SeRecibeUnaCadenaDeComandosParaMoverseEnDireccionAlOesteYMarsRoverSeMueveHaciaAdelante
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -119,8 +106,8 @@ test08SeRecibeUnaCadenaDeComandosParaMoverseEnDireccionAlOesteYMarsRoverSeMueveH
 
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@1)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:17:30'!
-test09SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAtrasEnDireccionAlOeste
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:08'!
+test08SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAtrasEnDireccionAlOeste
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -132,21 +119,8 @@ test09SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAtrasEnDi
 
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@5)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:17:40'!
-test10SeRecibeUnaCadenaDeComandosParaMoverseHaciaDistintosSentidosApuntandoHaciaElNorteYMarsRoverSeMueve
-
-	| movimientoDeMarsRover posicion  |
-	
-	posicion := (1@1).
-	
-	movimientoDeMarsRover := self iniciarMovimientoDeMarsRoverEnLaPosicion: posicion haciaElPuntoCardinal: puntoCardinalNorte .
-	
-	movimientoDeMarsRover movimiento: 'ffbfbf'.
-
-	self assert: (movimientoDeMarsRover estaEnLaPosicion: (3@1)).! !
-
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:17:53'!
-test11ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElNorteYCambiaDeDireccionHaciaElOeste
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:13'!
+test09ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElNorteYCambiaDeDireccionHaciaElOeste
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -159,8 +133,8 @@ test11ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElNorteYCambiaDeDireccionHaci
 	self assert: movimientoDeMarsRover estaEnLaDireccionOeste.
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (3@1)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:18:06'!
-test12ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElEsteYCambiaDeDireccionHaciaElNorte
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:19'!
+test10ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElEsteYCambiaDeDireccionHaciaElNorte
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -173,8 +147,8 @@ test12ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElEsteYCambiaDeDireccionHacia
 	self assert: movimientoDeMarsRover estaEnLaDireccionNorte.
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (2@4)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:18:24'!
-test13ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElSurYCambiaDeDireccionHaciaElEste
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:24'!
+test11ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElSurYCambiaDeDireccionHaciaElEste
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -187,8 +161,8 @@ test13ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElSurYCambiaDeDireccionHaciaE
 	self assert: movimientoDeMarsRover estaEnLaDireccionEste.
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (3@2)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:18:37'!
-test14ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElOesteYCambiaDeDireccionHaciaElNorte
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:28'!
+test12ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElOesteYCambiaDeDireccionHaciaElNorte
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -201,8 +175,8 @@ test14ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElOesteYCambiaDeDireccionHaci
 	self assert: movimientoDeMarsRover estaEnLaDireccionNorte.
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@2)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:18:49'!
-test15MarsRoversSeMueveInicialmenteHaciaElOesteLuegoHaciaElNorteYFinalmenteHaciaElEste
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:34'!
+test13MarsRoversSeMueveInicialmenteHaciaElOesteLuegoHaciaElNorteYFinalmenteHaciaElEste
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -215,8 +189,8 @@ test15MarsRoversSeMueveInicialmenteHaciaElOesteLuegoHaciaElNorteYFinalmenteHacia
 	self assert: movimientoDeMarsRover estaEnLaDireccionEste.
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@2)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:19:02'!
-test16ElMovimientoDeMarsRoversSeMueveInicialmenteHaciaElOesteLuegoHaciaElNorteLuegoHaciaElEsteYFinalmenteHaciaElSur
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:39'!
+test14ElMovimientoDeMarsRoversSeMueveInicialmenteHaciaElOesteLuegoHaciaElNorteLuegoHaciaElEsteYFinalmenteHaciaElSur
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -229,8 +203,8 @@ test16ElMovimientoDeMarsRoversSeMueveInicialmenteHaciaElOesteLuegoHaciaElNorteLu
 	self assert: movimientoDeMarsRover estaEnLaDireccionSur.
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@2)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:19:14'!
-test17ElMovimientoDeMarsRoversSeMueveInicialmenteHaciaElOesteLuegoHaciaElNorteLuegoHaciaElEsteLuegoHaciaElSurYFinalmenteHaciaElOeste
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:45'!
+test15ElMovimientoDeMarsRoversSeMueveInicialmenteHaciaElOesteLuegoHaciaElNorteLuegoHaciaElEsteLuegoHaciaElSurYFinalmenteHaciaElOeste
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -243,8 +217,8 @@ test17ElMovimientoDeMarsRoversSeMueveInicialmenteHaciaElOesteLuegoHaciaElNorteLu
 	self assert: movimientoDeMarsRover estaEnLaDireccionOeste.
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@2)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:19:25'!
-test18SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAtrasEnDireccionAlSur
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:51'!
+test16SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAtrasEnDireccionAlSur
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -257,8 +231,8 @@ test18SeRecibeUnaCadenaDeComandosYSeRealizaElMovimientoDeMarsRoverHaciaAtrasEnDi
 
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (5@1)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:19:46'!
-test19ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElNorteYCambiaDeDireccionHaciaElEste
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:34:57'!
+test17ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElNorteYCambiaDeDireccionHaciaElEste
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -271,8 +245,8 @@ test19ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElNorteYCambiaDeDireccionHaci
 	self assert: movimientoDeMarsRover estaEnLaDireccionEste .
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (3@1)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:20:33'!
-test20ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElEsteYCambiaDeDireccionHaciaElSur
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:35:02'!
+test18ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElEsteYCambiaDeDireccionHaciaElSur
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -285,8 +259,8 @@ test20ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElEsteYCambiaDeDireccionHacia
 	self assert: movimientoDeMarsRover estaEnLaDireccionSur .
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (0@4)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:20:49'!
-test21ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElSurYCambiaDeDireccionHaciaElOeste
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:35:07'!
+test19ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElSurYCambiaDeDireccionHaciaElOeste
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -299,8 +273,8 @@ test21ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElSurYCambiaDeDireccionHaciaE
 	self assert: movimientoDeMarsRover estaEnLaDireccionOeste .
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (3@2)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:21:00'!
-test22ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElOesteYCambiaDeDireccionHaciaElSur
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:35:12'!
+test20ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElOesteYCambiaDeDireccionHaciaElSur
 
 	| movimientoDeMarsRover posicion  |
 	
@@ -313,8 +287,8 @@ test22ElMovimientoDeMarsRoversSeMueveApuntandoHaciaElOesteYCambiaDeDireccionHaci
 	self assert: movimientoDeMarsRover estaEnLaDireccionSur .
 	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@2)).! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:21:11'!
-test23SeRecibeUnaCadenaDeComandosDondeUnoEsErroneoYSeLanzaUnaExcepcion
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:35:16'!
+test21SeRecibeUnaCadenaDeComandosDondeUnoEsErroneoYSeLanzaUnaExcepcion
 
 	| movimientoDeMarsRover posicion cadena |
 	
@@ -331,25 +305,8 @@ test23SeRecibeUnaCadenaDeComandosDondeUnoEsErroneoYSeLanzaUnaExcepcion
 	
 ! !
 
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:21:27'!
-test24SeRecibeUnaCadenaDeComandosErroneaDesdeElInicioYSeLanzaUnaExcepcion
-
-	| movimientoDeMarsRover  cadena |
-	
-	movimientoDeMarsRover := self iniciarMovimientoDeMarsRoverEnLaPosicion: (1@1) haciaElPuntoCardinal: puntoCardinalNorte .
-	
-	cadena := 'xxf'.
-	
-	self 
-	should: [movimientoDeMarsRover movimiento: cadena]
-	raise: Error
-	withExceptionDo: [ :anError | self assert: anError messageText equals:MovimientoDeMarsRover errorComandoInvalido ].
-	
-	self assert: (movimientoDeMarsRover estaEnLaPosicion: (1@1)).
-! !
-
-!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:21:39'!
-test25SeRecibeUnaCadenaDeComandosVaciaYSeLanzaUnaExcepcion
+!Tests methodsFor: 'tests' stamp: 'MMeichtri 11/4/2022 11:35:20'!
+test22SeRecibeUnaCadenaDeComandosVaciaYSeLanzaUnaExcepcion
 
 	| movimientoDeMarsRover  cadena |
 	
@@ -547,10 +504,10 @@ moverseHaciaAtras: marsRover
 
 	marsRover moverseAAtrasHaciaElNorte! !
 
-!DireccionDeMovimientoHaciaElNorte methodsFor: 'movimientos' stamp: 'MMeichtri 11/3/2022 23:43:48'!
+!DireccionDeMovimientoHaciaElNorte methodsFor: 'movimientos' stamp: 'MMeichtri 11/4/2022 11:37:24'!
 rotarHaciaLaDerecha: marsRover
 
-	^ marsRover rotarHaciaLaDerechaDesdeElNorte! !
+	marsRover rotarHaciaLaDerechaDesdeElNorte! !
 
 !DireccionDeMovimientoHaciaElNorte methodsFor: 'movimientos' stamp: 'MMeichtri 11/3/2022 23:43:43'!
 rotarHaciaLaIzquierda: marsRover
